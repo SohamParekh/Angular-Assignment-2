@@ -1,0 +1,57 @@
+
+<div class="card" style="margin-top: 10px;">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body" >
+
+    <div class="table-responsive">
+      <table class="table mb-0"
+             *ngIf="employees">
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>User Name</th>
+            <th>Gender</th>
+            <th>Qualification</th>
+            <th>Experience</th>
+            <th>Languages</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{ employee.firstName }} {{ employee.lastName }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.number }}</td>
+            <td>{{ employee.username }}</td>
+            <td>{{ employee.gender }}</td>
+            <td>{{ employee.qualification }}</td>
+            <td>{{ employee.experience }}</td>
+            <td>{{ employee.languages }}</td>
+            <td>
+              <a class="btn btn-outline-primary btn-sm"
+                 [routerLink]="['/employees',employee.id]"
+                 title="Edit Employee {{ employee.firstName }} {{ employee.lastName }} ">
+                Edit
+              </a>
+            </td>
+            <td>
+              <button
+                 class="btn btn-outline-danger btn-sm"
+                 (click)="deleteEmployee(employee)"
+                 title="Delete Employee {{ employee.firstName }} {{ employee.lastName }} ">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

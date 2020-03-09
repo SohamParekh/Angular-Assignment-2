@@ -1,0 +1,30 @@
+[
+  {
+        "id": 1,
+        "firstName": "soham",
+        "lastName": "parekh",
+        "email": "sp5@gmail.com",
+        "number":987643210,
+        "address":"asdasd",
+        "username":"asas",
+        "password":"asa",
+        "gender":"male",
+        "qualification": "CE",
+        "experience": "Fresher",
+        "languages": ["Java","CSharp"]
+  },
+  {
+    "id": 2,
+    "firstName": "S",
+    "lastName": "P",
+    "email": "sp5@gmail.com",
+    "number":987643210,
+    "address":"asdasd",
+    "username":"asas",
+    "password":"asa",
+    "gender":"female",
+    "qualification": "EC",
+    "experience": "Fresher",
+    "languages": ["PHP","CSharp"]
+}
+]
