@@ -82,13 +82,13 @@
         [(ngModel)]="employee.number"
         required
         #number="ngModel"
-        pattern="[789]\d{9}"
+        pattern="[6789]\d{9}"
       />
       <div class="alert-danger"
              *ngIf="number.errors && (number.dirty || number.touched)">
           <span *ngIf="number.errors.required">number is required</span>
-          <span *ngIf="number.errors.pattern">Type correct number</span>
-        </div>
+          <span *ngIf="number.errors.pattern">Digits should start with 6,7,8,9</span>
+       </div>
     </div>
 
     <div class="form-group">
