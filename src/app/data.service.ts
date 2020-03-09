@@ -9,12 +9,12 @@ import { Employee } from "./employee/employee.model";
   providedIn: 'root'
 })
 export class DataService {
- private url = 'api/employees.json'
+// private url = 'api/employees.json'
   constructor(private http: HttpClient) { }
 
   getEmployees(): Observable<Employee[]> {
     //console.log('Getting all books from the server.');
-    return this.http.get<Employee[]>(this.url)
+    return this.http.get<Employee[]>(`api/employees`)
       .pipe(
         catchError(err => this.handleError(err))
       );
