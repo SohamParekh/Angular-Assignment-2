@@ -1,14 +1,11 @@
-
 <div class="card" style="margin-top: 10px;">
   <div class="card-header">
-    {{pageTitle}}
+    {{ pageTitle }}
   </div>
 
-  <div class="card-body" >
-
+  <div class="card-body">
     <div class="table-responsive">
-      <table class="table mb-0"
-             *ngIf="employees">
+      <table class="table mb-0" *ngIf="employees">
         <thead>
           <tr>
             <th>Employee Name</th>
@@ -34,17 +31,24 @@
             <td>{{ employee.experience }}</td>
             <td>{{ employee.languages }}</td>
             <td>
-              <a class="btn btn-outline-primary btn-sm"
-                 [routerLink]="['/employees',employee.id]"
-                 title="Edit Employee {{ employee.firstName }} {{ employee.lastName }} ">
+              <a
+                class="btn btn-outline-primary btn-sm"
+                [routerLink]="['/employees', employee.id]"
+                title="Edit Employee {{ employee.firstName }} {{
+                  employee.lastName
+                }} "
+              >
                 Edit
               </a>
             </td>
             <td>
               <button
-                 class="btn btn-outline-danger btn-sm"
-                 (click)="deleteEmployee(employee)"
-                 title="Delete Employee {{ employee.firstName }} {{ employee.lastName }} ">
+                class="btn btn-outline-danger btn-sm"
+                (click)="deleteEmployee(employee)"
+                title="Delete Employee {{ employee.firstName }} {{
+                  employee.lastName
+                }} "
+              >
                 Delete
               </button>
             </td>
@@ -52,6 +56,5 @@
         </tbody>
       </table>
     </div>
-
   </div>
 </div>
